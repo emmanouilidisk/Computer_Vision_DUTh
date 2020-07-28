@@ -63,12 +63,10 @@ np.save('vocabulary.npy', vocabulary)
 vocabulary = np.load('vocabulary.npy')
 
 
-#<-------------------------------- Second Task ------------------------------------->
-
+#<------------------------------ Second Task ----------------------------------->
 sift = cv.xfeatures2d_SIFT.create()
 train_labels = np.zeros((0,1))
 temp_label = np.zeros((1,1))
-
 
 img_paths =[]
 
@@ -124,7 +122,7 @@ test_bow_descs = np.load('test_bow_descs.npy')
 test_labels = np.load('test_labels.npy')
 print('Found test_bow_descs & test_labels')
 
-#<-------------------------------- Task 3 & 4 ------------------------------------------->
+#<-------------------------------- Task 3 & 4 ------------------------------------->
 
 #
 # kNN algorithm
@@ -145,13 +143,11 @@ for i in range(test_labels.shape[0]):
     #print('Prediction '+str(pred_label)+ 'Label '+str(test_labels[i]))
     if pred_label  == test_labels[i]:
         counter += 1
-        
 print("Success ratio "+str(100*counter/len(test_labels))+" %")
 
 #
 # SVM algorithm
 #
-
 print("Starting SVM ...")
 
 
@@ -186,7 +182,6 @@ for i in range (test_bow_descs.shape[0]):
     #print('Predicted label = ', str(predicted_label), 'Correct label = ', str(test_labels[i]))
     if predicted_label == test_labels[i]:
         counter += 1
-
 percentage = 100 *counter/test_labels.shape[0]
 
 print("The success ratio is: "+ str(percentage) +" %")
