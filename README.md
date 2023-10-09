@@ -1,5 +1,5 @@
 ### Computer Vision DUTh
-<img src="logo.jpeg" alt="Logo" width="600" height="400">
+<img src="logo.jpeg" alt="Logo" width="500" height="400">
 Assignments from 7th Semester course in Computer Vision in ECE DUTh.
 
 The repo contains 3 assignments covering the following topics:
